@@ -1,6 +1,6 @@
 import nltk
 
-text="Mary had a little lamb. Her fleece was white as snow"
+text = input ("Enter your text here: ")
 from nltk.tokenize import word_tokenize, sent_tokenize
 
 sents=sent_tokenize(text)
