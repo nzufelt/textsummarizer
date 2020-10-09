@@ -11,5 +11,6 @@
   > So in this case, write the following in the paranthesis: images/FILENAME.png
 - if you need to use a space in the FILENAME use %20
 
-Example:
+# Example:
+
 ![](images/amy.png)
