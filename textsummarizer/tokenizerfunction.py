@@ -15,3 +15,7 @@ customStopWords=set(stopwords.words('english')+list(punctuation))
 wordsWOStopwords=[word for word in word_tokenize(text) if word not in customStopWords]
 print(wordsWOStopwords)
 
+from nltk.collocations import *
+bigram_measures = nltk.collocations.BigramAssocMeasures()
+finder = BigramCollocationFinder.from_words(wordsWOStopwords)
+sorted(finder.ngram_fd.items())
