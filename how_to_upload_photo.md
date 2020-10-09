@@ -6,8 +6,10 @@
   - If you can't do this, create a new throwaway .txt file and create the folder with it, then move the image 
   into the folder and delete the .txt file.
 - Insert your image into README.md with the following code
-  > ![](images/filename FILENAME.png)
+  > ![](Location of file)
+  
+  > So in this case, write the following in the paranthesis: images/FILENAME.png
 - if you need to use a space in the FILENAME use %20
 
 Example:
-![](images/filename amy.png)
+![](images/amy.png)
