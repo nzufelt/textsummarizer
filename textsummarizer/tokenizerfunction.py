@@ -18,4 +18,4 @@ print(wordsWOStopwords)
 from nltk.collocations import *
 bigram_measures = nltk.collocations.BigramAssocMeasures()
 finder = BigramCollocationFinder.from_words(wordsWOStopwords)
-sorted(finder.ngram_fd.items())
+print(finder.ngram_fd.items())
