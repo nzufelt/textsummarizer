@@ -34,3 +34,19 @@ print(stemmedWords)
 # POS Tagging
 tagList = nltk.pos_tag(word_tokenize(text2))
 pprint(tagList)
+
+# Disambiguating word meanings
+word = input ("Enter your word here: ")
+from nltk.corpus import wordnet as wn
+for ss in wn.synsets(word):
+   print(ss, ss.definition())
+
+text3 = input ("Enter a sentence with that previous word: ")
+from nltk.wsd import lesk
+contextualsentence = lesk(word_tokenize(text3), word)
+print(contextualsentence, contextualsentence.definition())
+
+text4 = input ("Enter another sentence with that previous word: ")
+from nltk.wsd import lesk
+contextualsentence = lesk(word_tokenize(text4), word)
+print(contextualsentence, contextualsentence.definition())
