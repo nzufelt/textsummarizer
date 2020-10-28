@@ -2,6 +2,7 @@ import nltk
 from pprint import pprint
 
 # Tokenizing module
+text = input ("Enter your text to tokenize here: ")
 from nltk.tokenize import word_tokenize, sent_tokenize
 # Stopwords module
 from nltk.corpus import stopwords
@@ -17,7 +18,7 @@ from nltk.wsd import lesk
 # Tokenizing text
 def do_tokenize():
     text = input ("Enter your text to tokenize here: ")
-    
+
     sents=sent_tokenize(text)
     print(sents)
 
@@ -39,7 +40,7 @@ def do_identifybigrams():
     customStopWords=set(stopwords.words('english')+list(punctuation))
     wordsWOStopwords=[word for word in word_tokenize(text) if word not in customStopWords]
     print(wordsWOStopwords)
-    
+
     bigram_measures = nltk.collocations.BigramAssocMeasures()
     finder = BigramCollocationFinder.from_words(wordsWOStopwords)
     print(finder.ngram_fd.items())
